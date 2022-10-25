@@ -1,0 +1,285 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.navigation-bar-wide, .navigation-bar-medium {
+  background-color: #2CA6A4;
+  width: 650px;
+  margin: 0 auto;
+  height: 55px;
+  padding-top: 8px;
+  border-radius: 10px;
+  border: 4px solid white;
+  filter: drop-shadow(4px 5px 3px rgb(225, 208, 184));
+}
+
+.navigation-bar-medium {
+  width: 500px;
+}
+
+.hi-there {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  /* margin-left: auto; */
+  float: 'right';
+  width: 350px;
+  height: 30px;
+  /* text-align: end; */
+}
+
+.hi-there p {
+  margin-left: auto; 
+  font-family: 'Fredoka', sans-serif;
+  margin-top: 7px; 
+}
+
+.nav-item {
+  margin: 0 25px;
+  font-size: 20px;
+  text-shadow: 2px 2px #228f8d;
+  /* filter: drop-shadow(4px 4px 1px #dfcfb9); */
+}
+
+.nav-item a {
+  font-family: 'Fredoka', sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: #ffd64f;
+  text-shadow: 2px 2px #9b7a3d;
+}
+
+.component-logo {
+  display: block;
+  /* max-height: 25%; */
+  max-width: 340px;
+  animation-duration: .5s;
+  animation-name: logo-fade-in;
+}
+
+@keyframes logo-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.component, .game-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #A79BC2;
+  border-block-start: 5px solid #b6b1c4;
+  border-inline-start: 5px solid #b4a5d8;
+  border-inline-end: 5px solid #8579a1;
+  border-block-end: 5px solid #776e8d;
+  outline: 2px solid black;
+  filter: drop-shadow(8px 10px 1px #D3C3AD);
+  animation-duration: 0.8s;
+  animation-name: comp-slidein;
+}
+
+.game-card {
+  width: 700px;
+}
+
+@keyframes comp-slidein {
+  from {
+    margin-top: 50px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+.button, .button-pressed {
+  border-radius: 5px;
+  font-size: 25px;
+  color: white;
+  background-color: #41857B;
+  /* border: 1px solid black; */
+  border-block-start: 3px solid #a4bdb9;
+  border-inline-start: 3px solid #5fb1a4;
+  border-inline-end: 3px solid #256358;
+  border-block-end: 3px solid #142e2a;
+  outline: 1px solid black;
+}
+
+.button-pressed {
+  color: rgb(83, 148, 139);
+  background-color: #315853;
+  border-block-start: 3px solid #48aa9d;
+  border-inline-start: 3px solid #51887f;
+  border-inline-end: 3px solid #245f52;
+  border-block-end: 3px solid #112422;
+  outline: 1px solid rgb(75, 75, 75);
+  box-shadow: 2px 2px 1px #4a3f50;
+}
+
+.input {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.game-card {
+  width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+  font-size: 20px;
+}
+
+.computer-screen {
+  color:#3eff48;
+  text-shadow: 3px 3px #203930;
+  background: #27262e;
+  outline: 2px solid black;
+  border-block-start: 8px solid #4f3767;
+  border-inline-start: 8px solid #543854;
+  border-inline-end: 8px solid #312532;
+  border-block-end: 8px solid #1e1b24;
+  border-radius: 45px;
+  padding: 4px;
+  animation-duration: 2s;
+  animation-name: screen-open;
+  overflow: hidden;
+}
+
+.computer-screen p, .computer-screen ul li, .computer-screen button, .computer-screen input {
+  font-family: 'Press Start 2P', cursive;
+  animation: text-fade-in 1s;
+  /* animation: distort 2000ms infinite; */
+}
+
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.player-list-item {
+  margin-left: 8px;
+}
+
+.computer-screen .chatArea {
+  padding: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.computer-screen .chatArea .messages {
+  padding: 0;
+  list-style-type: none;
+}
+
+.computer-screen .chatArea .messages li {
+  margin-bottom: 10px;
+}
+
+.host-options {
+  margin: 40px 0 0 10px;
+}
+
+.host-options-list {
+  margin-left: 10px;
+}
+
+.host-options-list input {
+  margin-right: 5px;
+}
+
+.chat-computer-input {
+  width: 380px; 
+  color: #3eff48;
+  background: none; 
+  border: 2px solid #3eff48; 
+  border-radius: 3px;
+}
+
+.computer-input {
+  color: #3eff48;
+  background: none; 
+  border: 2px solid #3eff48; 
+  border-radius: 3px;
+  width: 270px;
+}
+
+.chat-computer-button {
+  border: none;
+  color: #27262e; 
+  background-color: #3eff48;
+  border-radius: 4px;
+  padding: 5px 12px;
+  width: 100px;
+}
+
+.computer-button {
+  border: none;
+  color: #27262e; 
+  background-color: #3eff48;
+  border-radius: 4px;
+  padding: 5px 12px;
+}
+
+@keyframes text-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* animation for distorted computer text */
+/* @keyframes distort {
+  0% {
+      text-shadow: 2px 1px #552010, -3px -3px #0b4791;
+  }
+  25% {
+      text-shadow: -2px -3px #552010, 3px 1px #0b4791;
+  }
+  50% {
+    text-shadow: 2px -1px #552010, -3px 1px #0b4791;
+  }
+  75% {
+      text-shadow: -3px -1px #552010, -3px -1px #0b4791;
+  }
+  100% {
+      text-shadow: -2px -2px #552010, 3px -1px #0b4791;
+  }
+} */
+
+@keyframes screen-open {
+  from {
+    max-height: 0px;
+  }
+  to {
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .game-card {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .game-card {
+    width: 600px;
+  }
+  .navigation-bar-wide {
+    width: 500px;
+    padding-top: 12px;
+  }
+  .nav-item {
+    margin: 0 15px;
+    font-size: 16px;
+  }
+}
+
+/* .button-hover {
+  background-color: red;
+} */
