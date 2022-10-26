@@ -3,25 +3,33 @@ import { useState } from 'react';
 import Card from './MemoryCard';
 import Timer from '../Timer'
 import RoundOver from '../RoundOver'
+import octopus from '../../assets/images/octopus.png'
+import jellyfish from '../../assets/images/jellyfish.png'
+import shark from '../../assets/images/shark.png'
+import shrimp from '../../assets/images/shrimp.png'
+import starfish from '../../assets/images/starfish.png'
+import whale from '../../assets/images/whale.png'
+import manatee from '../../assets/images/manatee.png'
+import coral from '../../assets/images/coral.jpeg'
 
 function Board({ socket, room }) {
     const cardsArray = [
-        { id: 1, img: '/images/manatee.png', status: "" },
-        { id: 1, img: '/images/manatee.png', status: "" },
-        { id: 2, img: '/images/whale.png', status: "" },
-        { id: 2, img: '/images/whale.png', status: "" },
-        { id: 3, img: '/images/jellyfish.png', status: "" },
-        { id: 3, img: '/images/jellyfish.png', status: "" },
-        { id: 4, img: '/images/starfish.png', status: "" },
-        { id: 4, img: '/images/starfish.png', status: "" },
-        { id: 5, img: '/images/shark.png', status: "" },
-        { id: 5, img: '/images/shark.png', status: "" },
-        { id: 6, img: '/images/coral.jpeg', status: "" },
-        { id: 6, img: '/images/coral.jpeg', status: "" },
-        { id: 7, img: '/images/octopus.png', status: "" },
-        { id: 7, img: '/images/octopus.png', status: "" },
-        { id: 8, img: '/images/shrimp.png', status: "" },
-        { id: 8, img: '/images/shrimp.png', status: "" }
+        { id: 1, img: manatee, status: "" },
+        { id: 1, img: manatee, status: "" },
+        { id: 2, img: whale, status: "" },
+        { id: 2, img: whale, status: "" },
+        { id: 3, img: jellyfish, status: "" },
+        { id: 3, img: jellyfish, status: "" },
+        { id: 4, img: starfish, status: "" },
+        { id: 4, img: starfish, status: "" },
+        { id: 5, img: shark, status: "" },
+        { id: 5, img: shark, status: "" },
+        { id: 6, img: coral, status: "" },
+        { id: 6, img: coral, status: "" },
+        { id: 7, img: octopus, status: "" },
+        { id: 7, img: octopus, status: "" },
+        { id: 8, img: shrimp, status: "" },
+        { id: 8, img: shrimp, status: "" }
     ];
 
     const resetCards = () => {

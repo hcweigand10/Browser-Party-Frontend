@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import RoundOver from '../RoundOver';
+import mole from '../../assets/images/mole.png'
 
 const MOLE_NUMBER = 9
 let TIME_LIMIT = 30000
@@ -86,7 +87,7 @@ const Whack = function ({ socket, room }) {
           border: 1px solid black;
           border-radius: 50%;
           background-repeat: no-repeat;
-          background-image: url(/images/mole.png);
+          background-image: url(${mole});
           background-size: 90%;
           background-position: 50% 50%;
           animation: molemove 1s infinite;

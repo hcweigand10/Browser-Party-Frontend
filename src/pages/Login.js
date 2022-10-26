@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link} from "react-router-dom"
+import bplogo from '../assets/images/browser-party-logo.png'
+
 
 const styles = {
   logo: {
@@ -42,7 +44,7 @@ export default function Login({loggedIn, logMeOut, logMeIn, username, loginInfo,
         cursor: pointer
       `}
             </style>
-        <img style={styles.logo} className="component-logo" alt="Browser Party logo" src="/images/browser-party-logo.png"></img>
+        <img style={styles.logo} className="component-logo" alt="Browser Party logo" src={bplogo}></img>
         <div style={styles.component} className="component">
           <div>
             {username ? (

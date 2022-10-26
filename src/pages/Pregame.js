@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import pawn from '../assets/images/pawn-piece.png'
 
 
 function Pregame({ socket, room, players, username, isHost, checkbox, startGame }) {
@@ -39,7 +40,7 @@ function Pregame({ socket, room, players, username, isHost, checkbox, startGame 
                 <ul className="player-list">
                     {players.map(player => (
                         <li className="player-list-item" key={player.username} style={(player.username === username) ? { color: "white" } : {}}>
-                            <img style={{maxHeight: '20px', margin: '0 5px 5px 0'}} src="/images/pawn-piece.png"/>
+                            <img style={{maxHeight: '20px', margin: '0 5px 5px 0'}} src={pawn}/>
                              {player.username} (score: {player.score})
                         </li>
                     ))}

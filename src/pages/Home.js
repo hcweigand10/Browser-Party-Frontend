@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import bplogo from '../assets/images/browser-party-logo.png'
+import carddeck from '../assets/images/card-deck.png'
 
 export default function Home(props) {
 
@@ -38,11 +40,11 @@ export default function Home(props) {
 
   return (
     <div>
-        <img style={styles.logo} className="component-logo" alt="Browser Party logo" src="/images/browser-party-logo.png"></img>
+        <img style={styles.logo} className="component-logo" alt="Browser Party logo" src={bplogo}></img>
       <div style={styles.component} className="component">
         {props.username ? (
           <div style={{padding: '24px 10px 0px 0px',}}>
-            <img style={{maxWidth: '90px', float: 'left', marginRight: '15px', flexWrap: 'wrap'}} className="component-logo" alt="Browser Party logo" src="/images/card-deck.png"></img>
+            <img style={{maxWidth: '90px', float: 'left', marginRight: '15px', flexWrap: 'wrap'}} className="component-logo" alt="Browser Party logo" src={carddeck}></img>
             <h4 style={{paddingTop: '5px', fontSize: '20px', textAlign: 'left', flexWrap: 'wrap'}}> Your friends are waiting for you! Press play up top!</h4>
           </div>
         ) : (

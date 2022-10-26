@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import API from '../utils/api';
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from "react-router-dom";
+import bplogo from '../assets/images/browser-party-logo.png'
+
 
 export default function Profile({ loginInfo, username }) {
   const [friends, setFriends] = useState([])
@@ -68,7 +70,7 @@ export default function Profile({ loginInfo, username }) {
 
   return (
     <div>
-      <img style={styles.logo} className="component-logo" alt="Browser Party logo" src="/images/browser-party-logo.png"></img>
+      <img style={styles.logo} className="component-logo" alt="Browser Party logo" src={bplogo}></img>
       {username ? (
         <div style={styles.component} className="component">
           <div className="computer-screen" style={styles.screen}>

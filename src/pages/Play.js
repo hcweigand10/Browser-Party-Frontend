@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Game from "./Game"
 import io from "socket.io-client";
 import { useNavigate } from "react-router-dom";
+import bplogo from '../assets/images/browser-party-logo.png'
 
 
 // CHANGE FOR LOCAL vs DEPLOYED
@@ -110,9 +111,9 @@ export default function Play({ username }) {
 
   return (
     <div>
+      <img style={styles.logo} className="component-logo" alt="Browser Party logo" src={bplogo}></img>
       {username ? (
         <div>
-          <img style={styles.logo} className="component-logo" alt="Browser Party logo" src="/images/browser-party-logo.png"></img>
           <div>
             {inGame ? (
               <div className="game-card">
@@ -163,7 +164,6 @@ export default function Play({ username }) {
         </div>
       ) : (
         <div>
-          <img style={styles.logo} className="component-logo" alt="Browser Party logo" src="/images/browser-party-logo.png"></img>
           <div style={{
             width: '400px',
             margin: '0 auto',
