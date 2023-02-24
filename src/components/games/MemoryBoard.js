@@ -1,5 +1,5 @@
 import '../../css/game.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Card from './MemoryCard';
 import Timer from '../Timer'
 import RoundOver from '../RoundOver'
