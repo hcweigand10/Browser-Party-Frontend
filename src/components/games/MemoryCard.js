@@ -1,3 +1,5 @@
+import React from "react";
+
 function Card({card, id, handleClick}) {
     const cardClass = card.status ? " active " + card.status : ""; 
     return (
