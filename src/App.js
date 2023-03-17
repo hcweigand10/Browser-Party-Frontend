@@ -34,20 +34,21 @@ function App() {
             API.getTokenData(token)
             .then((data) => {
                   setLoading(false)
-                    if (data.err) {
-                        console.log(data.err);
-                        localStorage.removeItem("token");
-                    } else {
-                        setUsername(data.username);
-                        setToken(token);
-                    }
+                  if (data.err) {
+                    console.log(data.err);
+                    localStorage.removeItem("token");
+                  } else {
+                    setUsername(data.username);
+                    setToken(token);
+                  }
                 })
                 .catch((err) => {
+                    setLoading(false)
                     console.log("bad token");
                     console.log(err);
                 });
         }
-    });
+    }, []);
 
     const registerSubmit = async (e) => {
         e.preventDefault();
