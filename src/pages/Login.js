@@ -35,7 +35,7 @@ const styles = {
   }
 }
 
-export default function Login({loggedIn, logMeOut, logMeIn, username, loginInfo, handleInputChange}) {
+export default function Login({loggedIn, logMeOut, logMeIn, username, loginInfo, handleInputChange, loading}) {
 
   return (
       <div>
@@ -47,26 +47,30 @@ export default function Login({loggedIn, logMeOut, logMeIn, username, loginInfo,
         <img style={styles.logo} className="component-logo" alt="Browser Party logo" src={bplogo}></img>
         <div style={styles.component} className="component">
           <div>
-            {username ? (
+            {loading ? <h2>Loading...</h2> :
               <div>
-                <h2>You are now logged in, {username}</h2>
-                <Link to="/">Home</Link>
-                <button style={styles.button} className="button" onClick={logMeOut}>LogOut</button>
+                {username ? (
+                  <div>
+                    <h2>You are now logged in, {username}</h2>
+                    <Link to="/">Home</Link>
+                    <button style={styles.button} className="button" onClick={logMeOut}>LogOut</button>
+                  </div>
+                ) : (
+                  <div>
+    
+                    <div style={styles.form} className="form-group">
+                      <label>Username</label>
+                      <input style={styles.input} className="input" type="text" value={loginInfo.username} onChange={handleInputChange} name="username"/>
+                    </div>
+                    <div  style={styles.form} className="form-group">
+                      <label>Password</label>
+                      <input style={styles.input} className="input" type="password" value={loginInfo.password} onChange={handleInputChange} name="password"/>
+                      <button style={{marginTop: '9px', marginLeft: '98px', fontSize: '25px'}} className="button" onClick={logMeIn}>Login</button>
+                    </div>
+                  </div>
+                )}
               </div>
-            ) : (
-              <div>
-
-                <div style={styles.form} className="form-group">
-                  <label>Username</label>
-                  <input style={styles.input} className="input" type="text" value={loginInfo.username} onChange={handleInputChange} name="username"/>
-                </div>
-                <div  style={styles.form} className="form-group">
-                  <label>Password</label>
-                  <input style={styles.input} className="input" type="password" value={loginInfo.password} onChange={handleInputChange} name="password"/>
-                  <button style={{marginTop: '9px', marginLeft: '98px', fontSize: '25px'}} className="button" onClick={logMeIn}>Login</button>
-                </div>
-              </div>
-            )}
+            }
               </div>
           </div>
       </div>

@@ -12,6 +12,7 @@ import About from "./pages/About";
 function App() {
     const [username, setUsername] = useState("");
     const [token, setToken] = useState("");
+    const [loading, setLoading] = useState(false)
 
     var loggedIn = false;
 
@@ -28,8 +29,10 @@ function App() {
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (token) {
+            setLoading(true)
             API.getTokenData(token)
-                .then((data) => {
+            .then((data) => {
+                  setLoading(false)
                     if (data.err) {
                         console.log(data.err);
                         localStorage.removeItem("token");
@@ -49,10 +52,12 @@ function App() {
         e.preventDefault();
         console.log("Register Submit Activated");
         try {
+            setLoading(true)
             const response = await API.createUser(
-                registerInfo.username,
-                registerInfo.password
-            );
+              registerInfo.username,
+              registerInfo.password
+              );
+            setLoading(false)
             if (response.code === 11000) {
                 alert("That username is already taken");
                 setRegisterInfo({
@@ -77,10 +82,12 @@ function App() {
         console.log("LOGGING IN!", loginInfo);
         e.preventDefault();
         try {
+            setLoading(true)
             const data = await API.login(
                 loginInfo.username,
                 loginInfo.password
             );
+            setLoading(false)
             console.log(data);
             if (data.token) {
                 loggedIn = true;
@@ -141,6 +148,7 @@ function App() {
                                 username={username}
                                 loginInfo={loginInfo}
                                 handleInputChange={handleInputChange}
+                                loading={loading}
                             />
                         }
                     />
