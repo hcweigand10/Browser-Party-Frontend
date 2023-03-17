@@ -52,7 +52,7 @@ export default function Login({loggedIn, logMeOut, logMeIn, username, loginInfo,
                 {username ? (
                   <div>
                     <h2>You are now logged in, {username}</h2>
-                    <Link to="/">Home</Link>
+                    <Link to="/" style={styles.button} className="button">Home</Link>
                     <button style={styles.button} className="button" onClick={logMeOut}>LogOut</button>
                   </div>
                 ) : (
