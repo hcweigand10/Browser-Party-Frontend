@@ -14,7 +14,6 @@ function App() {
     const [username, setUsername] = useState("");
     const [token, setToken] = useState("");
     const [loading, setLoading] = useState(false)
-    const navigate = useNavigate()
 
     var loggedIn = false;
 
@@ -96,7 +95,6 @@ function App() {
                 setUsername(data.user.username);
                 setToken(data.token);
                 localStorage.setItem("token", data.token);
-                navigate("/");
             } else {
                 alert("Invalid Login Credentials");
                 setLoginInfo({
@@ -114,7 +112,7 @@ function App() {
         localStorage.removeItem("token");
         setUsername("");
         setToken("");
-        navigate("/");
+        window.location.replace("/");
     };
     const handleInputChange = (e) => {
         setLoginInfo({
