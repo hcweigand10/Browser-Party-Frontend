@@ -8,11 +8,13 @@ import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import Register from "./pages/Register";
 import About from "./pages/About";
+import { useNavigate } from "react-router-dom";
 
 function App() {
     const [username, setUsername] = useState("");
     const [token, setToken] = useState("");
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
 
     var loggedIn = false;
 
@@ -94,7 +96,7 @@ function App() {
                 setUsername(data.user.username);
                 setToken(data.token);
                 localStorage.setItem("token", data.token);
-                window.location.replace("/");
+                navigate("/");
             } else {
                 alert("Invalid Login Credentials");
                 setLoginInfo({
@@ -112,7 +114,7 @@ function App() {
         localStorage.removeItem("token");
         setUsername("");
         setToken("");
-        window.location.replace("/");
+        navigate("/");
     };
     const handleInputChange = (e) => {
         setLoginInfo({
