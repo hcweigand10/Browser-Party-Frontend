@@ -96,6 +96,7 @@
 }
 
 .button, .button-pressed {
+  padding: 3px;
   border-radius: 5px;
   font-size: 25px;
   color: white;
