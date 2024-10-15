@@ -8,7 +8,7 @@ import bplogo from '../assets/images/browser-party-logo.png'
 // CHANGE FOR LOCAL vs DEPLOYED
 
 // DEPLOYED
-const socket = io("https://browser-party-socketio.onrender.com/", {
+const socket = io("https://browser-party-socket-io.herokuapp.com", {
   withCredentials: true
 });
 
